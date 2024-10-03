@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations</title>
+    <style>
+        table { width: 50%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+
+    <h1>CRUD Operations Example</h1>
+    <form id="crudForm">
+        <input type="hidden" id="editIndex" value="">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="age" placeholder="Age" required>
+        <button type="submit">Add/Update</button>
+    </form>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        const form = document.getElementById('crudForm');
+        const nameInput = document.getElementById('name');
+        const ageInput = document.getElementById('age');
+        const dataTable = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+        let data = [];
+        let editIndex = null;
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = nameInput.value;
+            const age = ageInput.value;
+
+            if (editIndex !== null) {
+                // Update existing entry
+                data[editIndex] = { name, age };
+                editIndex = null;
+            } else {
+                // Create new entry
+                data.push({ name, age });
+            }
+
+            renderTable();
+            form.reset();
+        });
+
+        function renderTable() {
+            dataTable.innerHTML = '';
+            data.forEach((item, index) => {
+                const row = dataTable.insertRow();
+                row.insertCell(0).textContent = item.name;
+                row.insertCell(1).textContent = item.age;
+                const actionsCell = row.insertCell(2);
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Edit';
+                editButton.onclick = () => editEntry(index);
+                actionsCell.appendChild(editButton);
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.onclick = () => deleteEntry(index);
+                actionsCell.appendChild(deleteButton);
+            });
+        }
+
+        function editEntry(index) {
+            editIndex = index;
+            const item = data[index];
+            nameInput.value = item.name;
+            ageInput.value = item.age;
+        }
+
+        function deleteEntry(index) {
+            data.splice(index, 1);
+            renderTable();
+        }
+    </script>
+
+</body>
+</html>
