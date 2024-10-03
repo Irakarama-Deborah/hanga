@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation with Dropdown</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <style type="text/css">
+   	.navbar-brand{
+   		color: limegreen;
+   	}
+   	.custom-btn {
+    background-color: forestgreen; /* Example: an orange color */
+    color: white; width: 110px;
+}
+
+.custom-btn:hover {
+    background-color:  limegreen; transition:  0.2s;
+    color: white;
+}
+.custom-btn2{
+	background-color: limegreen; /* Example: an orange color */
+    color: white; width: 150px;
+}.custom-btn2:hover {
+    background-color:  lime; transition:  0.2s;
+    color: white;
+}.card-text{
+	font-size: 12px;
+}
+
+   </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary " style="
+  
+  padding: 15px; /* Padding around the content */
+  width: 100%; /* Full width of the screen */
+  position: sticky; /* Sticky position */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000;
+">
+  <div class="container-fluid">
+    <a class="navbar-brand navbar " href="#">UpWork</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Find talent
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Find work
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Why Upwork
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           What's new
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Enterprise</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <i class="material-icons bi bi-alarm fs-3.5 bi bi-alarm me-3 bi bi-alarm mt-2">search</i> 
+        <button class="btn btn-outline" type="submit">login</button>
+        <button class="btn custom-btn" type="submit">signup</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<hr>
+<nav class="navbar navbar-expand-lg bg-body-tertiary  fs-6 nav-link text-decoration-overline"
+style="
+  
+  padding: px; /* Padding around the content */
+  width: 100%; /* Full width of the screen */
+  position: sticky; /* Sticky position */
+  top: 60px; /* Adjust based on the height of the main navbar */
+  z-index: 999;
+"
+>
+  <div class="container-fluid" style="font-size: 13px;">
+    <a class="nav-link active" aria-current="page" href="#">Development & IT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse ms-1" id="navbarNavAltMarkup">
+      <div class="navbar-nav ">
+        <a class="nav-link active nav-link-spacing ms-3  " aria-current="page" href="#">AI Services</a>
+        <a class="nav-link active nav-link-spacing ms-3" aria-current="page" href="#">Design & creative</a>
+        <a class="nav-link active nav-link-spacing ms-3 nav-link text-decoration-underline-hover" aria-current="page" href="#">Sales & Marketing</a>
+        <a class="nav-link active nav-link-spacing ms-3 nav-link text-decoration-overline" aria-current="page" href="#">Admin & CustomerSupport</a>
+   <div class="dropdown">
+  <a class="btn btn-light dropdown-toggle nav-link-spacing ms-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"style="font-size: 13px;">
+    More
+  </a>
+
+  <ul class="dropdown-menu ">
+    <li><a class="dropdown-item " href="#">Writting & Translation</a></li>
+    <li><a class="dropdown-item" href="#">Finance & Accounting</a></li>
+    <li><a class="dropdown-item" href="#">HR &TRaining</a></li>
+    <li><a class="dropdown-item" href="#">Legal</a></li>
+    <li><a class="dropdown-item" href="#">Engineering & Archtecture</a></li>
+    <li><a class="dropdown-item" href="#">See all specialisations</a></li>
+
+  </ul>
+</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="" style="width: 40rem; margin-left: 300px;margin-top: 80px;">
+  <div class="card-body">
+    <h1 class="card-title" style="font-size: 60px; font-family: 'Arial';word-spacing: -8px; font-weight: bold;">How work<br> should work</h1>
+    <p class="" style="font-weight: 100;opacity: 0.6;font-size: 18px;">Forget the old rules. You can have the<br>
+best people. Right now. Right here</p>
+    <a href="#" class="btn custom-btn2">Get Started</a>
+  </div>
+</div>
+<img src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/c_scale,w_480,h_327,f_auto,q_auto,dpr_2.0/brontes/hero/searching-talent@1x.png" class="" alt="..." style="width: 430px;float: right;margin-top: -270px;margin-right: 50px; ">
+
+<div class="" style="margin-left: 300px;" >
+  <div class="row g-0" style="width: 1000px;height: 700px; margin-top: 100px;margin-left: 6	0px;">
+    <div class="col-md-4">
+      <img src="data:image/jpeg;base64,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" class="img-fluid rounded-start" >
+    </div>
+    <div class="col-md-8">
+      <div class="card-body" style="margin-left: 150px;">
+      	<h1>Up your work game, it’s <br>easy</h1>
+        
+        <h5 class="card-title">No cost to join</h5>
+        <p class="card-text">
+Register and browse talent profiles, explore projects, or even book a<br> consultation.</p>
+        <p class="card-text"></p>
+        <h5 class="card-title">Post a job and hire top talent</h5>
+        <p class="card-text">
+Finding talent doesn’t have to be a chore. Post a job or we can search for you!</p>
+        <p class="card-text"></p>
+        <h5 class="card-title">Work with the best—without breaking the bank</h5>
+        <p class="card-text">Work with the best—without breaking the bank
+Upwork makes it affordable to up<br> your work and take advantage of low transaction rates.</p>
+        <p class="card-text"></p>
+         <a href="#" class="btn custom-btn2"style="width: 180px; background-color: forestgreen">Sign Up For Free</a>
+
+ <a href="#" class="btn custom-btn2" style="width: 200px;background-color: white; color: black;border: 2px solid limegreen; border-radius: 10px;">Learn how to hire</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center" style="margin-top: -250px;">
+ 
+  <div class="card-body">
+    <h1 class="card-title">Get instant answers</h1>
+    <p class="card-text">Hi there! 👋 I'm Uma, Upwork's Mindful AI.<br>
+How can I help you today?</p>
+    <a href="#" class="btn btn" style="border-radius: 80px;width: 430px;height: 47px;background-color: black;">
+    	<div style=""><button type="button" class="btn btn-light" style="font-size: 13px;border-radius: 20px;">I am hiring for a project</button>
+<button type="button" class="btn btn-light" style="font-size: 13px;border-radius: 20px;">I'm looking for work</button></div>
+    </a>
+  </div>
+</div>
+
+<button class="mm" id="12" style="width: 100px; margin-bottom: 40px;margin-left: 200px; background-color: limegreen; color: wheat;border-radius: 10px;">send</button>
+<!-- all forms-->
+ <div style="padding-top: 5px;">
+<div style="display: inline-flex;">
+<div class="card mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  
+</div>
+
+<div class="card text-center mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card text-end" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card text-end" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+<!-- this is the second parts of form-->
+<div style="display: inline-flex;">
+<div class="card mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card text-center mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card text-end" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card text-end" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+	
+<script>
+  const btn = document.getElementById("12");
+
+  btn.addEventListener("mouseover", () => {
+      btn.style.backgroundColor = 'red';
+  });
+
+  btn.addEventListener("mouseout", () => {
+      btn.style.backgroundColor = 'lightgray'; // Reset to original color on mouse out
+  });
+</script>
+
+</body>
+</html>
