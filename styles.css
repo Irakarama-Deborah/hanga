@@ -1,0 +1,23 @@
+/* Basic styles for the hero section */
+.hero {
+    background: url('https://via.placeholder.com/1920x800') no-repeat center center;
+    background-size: cover;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+.hero .btn {
+    margin-top: 1rem;
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
